@@ -1,0 +1,101 @@
+
+.main-layout {
+  display: flex;
+  min-height: 85vh;
+}
+
+.sidebar {
+  width: 220px;
+  background-color: #e3eee5;
+  padding: 25px 20px;
+}
+
+.sidebar h2 {
+  margin-bottom: 25px;
+  color: #245c3a;
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar li {
+  padding: 15px 10px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.sidebar li:hover {
+  background-color: #c8ddcc;
+}
+
+.dashboard-content {
+  flex: 1;
+  padding: 10px;
+  min-width: 0;
+}
+
+
+/* Form Styling */
+
+form {
+  margin: 20px 30px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+input {
+  padding: 12px;
+  border: 1px solid #c8d8ca;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+button {
+  padding: 12px 20px;
+  background-color: #245c3a;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #17452a;
+}
+
+.dashboard-content h3 {
+  margin: 20px 30px;
+}
+
+.dashboard-content p {
+  margin: 12px 30px;
+}
+
+
+/* Table Styling */
+
+.data-table {
+  width: calc(100% - 60px);
+  margin: 20px 30px;
+  border-collapse: collapse;
+  background-color: white;
+}
+
+.data-table th,
+.data-table td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #e0e8e1;
+}
+
+.data-table th {
+  background-color: #e3eee5;
+  color: #245c3a;
+}
+
+.data-table tr:hover {
+  background-color: #f4f8f4;
+}
