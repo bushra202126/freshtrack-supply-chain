@@ -1,16 +1,41 @@
 
-function Sidebar({ onNavigate }) {
+function Sidebar({ onNavigate, currentPage }) {
+  const menuItems = [
+    { name: "Dashboard", icon: "⌂" },
+    { name: "Products", icon: "▦" },
+    { name: "Suppliers", icon: "♙" },
+    { name: "Inventory", icon: "▤" },
+    { name: "Shipments", icon: "⇢" }
+  ];
+
   return (
     <aside className="sidebar">
-      <h2>Menu</h2>
+      <div className="sidebar-heading">
+        <p>WORKSPACE</p>
+      </div>
 
-      <ul>
-        <li onClick={() => onNavigate("Dashboard")}>Dashboard</li>
-        <li onClick={() => onNavigate("Products")}>Products</li>
-        <li onClick={() => onNavigate("Suppliers")}>Suppliers</li>
-        <li onClick={() => onNavigate("Inventory")}>Inventory</li>
-        <li onClick={() => onNavigate("Shipments")}>Shipments</li>
+      <ul className="sidebar-menu">
+        {menuItems.map((item) => (
+          <li
+            key={item.name}
+            className={
+              currentPage === item.name ? "active" : ""
+            }
+            onClick={() => onNavigate(item.name)}
+          >
+            <span className="menu-icon">{item.icon}</span>
+            <span>{item.name}</span>
+          </li>
+        ))}
       </ul>
+
+      <div className="sidebar-footer">
+        <div className="sidebar-footer-icon">✦</div>
+        <div>
+          <strong>FreshTrack</strong>
+          <p>Supply Chain System</p>
+        </div>
+      </div>
     </aside>
   );
 }
