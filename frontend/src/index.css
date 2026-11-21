@@ -521,7 +521,7 @@ button:active {
 .stock-status.in-stock,
 .shipment-status.delivered {
   background: #e0f3e5;
-  color: #287344;
+  color: #045120;
 }
 
 .stock-status.low-stock,
